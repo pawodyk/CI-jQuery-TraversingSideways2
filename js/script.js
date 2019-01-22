@@ -20,5 +20,9 @@ $(document).ready(function() {
 	  	$(".stream3").addClass('highlight_stream');
 	});
 
+	$(".card_image").click( function() {
+		$(this).next().children().slideDown("slow");
+		console.log("click click")
+	})
 
 }); 
