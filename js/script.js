@@ -35,4 +35,26 @@ $(document).ready(function() {
 		$(this).toggleClass("highlight");
 	})
 
+	//challenge 4
+
+	$("ul").append("<li id=\"all_btn\">ALL</li>");
+	$("ul").append("<li id=\"select_btn\">SELECT</li> ");
+	
+	$("#select_btn").click(function() {
+		$(".card").each(function(){
+			var par = $(this).children(".card_bottom").children("p");
+			if($(this).hasClass("highlight")){
+				par.slideDown("slow");
+			} else {
+				par.slideUp("slow");
+			}
+		});
+	});
+
+	// $("#select_btn").click(function () {
+	// 	$(".card").each(function () {
+	// 		$(this).hasClass("highlight").slideUp("slow");
+	// 	});
+	// });
+
 }); 
