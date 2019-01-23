@@ -20,9 +20,19 @@ $(document).ready(function() {
 	  	$(".stream3").addClass('highlight_stream');
 	});
 
+	//challenge 2
 	$(".card_image").click( function() {
-		$(this).next().children().slideDown("slow");
-		console.log("click click")
+		var para = $(this).next().children("p");
+		if (para.css("display") == "none"){
+			para.slideDown("slow");
+		} else {
+			para.slideUp("slow");
+		}
+	});
+
+	//challenge 3
+	$(".card").click(function(){
+		$(this).toggleClass("highlight");
 	})
 
 }); 
